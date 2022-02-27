@@ -1,0 +1,13 @@
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\bin\Debug\netcoreapp3.1\Poker.exe
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\bin\Debug\netcoreapp3.1\Poker.deps.json
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\bin\Debug\netcoreapp3.1\Poker.runtimeconfig.json
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\bin\Debug\netcoreapp3.1\Poker.runtimeconfig.dev.json
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\bin\Debug\netcoreapp3.1\Poker.dll
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\bin\Debug\netcoreapp3.1\Poker.pdb
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.csprojAssemblyReference.cache
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.AssemblyInfoInputs.cache
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.AssemblyInfo.cs
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.csproj.CoreCompileInputs.cache
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.dll
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.pdb
+C:\Users\lowho\OneDrive - Ngee Ann Polytechnic\Desktop\My Own Project\Poker\Poker\obj\Debug\netcoreapp3.1\Poker.genruntimeconfig.cache
