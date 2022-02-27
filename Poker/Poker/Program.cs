@@ -7,29 +7,93 @@ namespace Poker
     {
         static void Main(string[] args)
         {
+            int n = 4;
             List<Card> CardList = new List<Card>();
             List<Card> PlayersCardsList = new List<Card>();
-            List<Card> River = new List<Card>();
+            List<Card> RiverList = new List<Card>();
             List<Card> DealerCards = new List<Card>();
-            Card(CardList);
-            Console.Write("Enter the amount of players: ");
-            int players = Convert.ToInt32(Console.ReadLine());
-            Hands(CardList, PlayersCardsList,players);
-            Options();
-            Console.Write("Option Picked: ");
-            int choice =Convert.ToInt32(Console.ReadLine());
-            if(choice == 1)
+            List<int> PlayerList = new List<int>();
+            PokerBalance PB = new PokerBalance();
+            int pot = 0;
+            while (true)
             {
-
+                MainMenu();
+                Console.Write("Your choice: ");
+                int option = Convert.ToInt32(Console.ReadLine());
+                if (option == 1)
+                {
+                    Card(CardList);
+                    Console.Write("Enter the amount of players: ");
+                    int players = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 0; i < players; i++) { PlayerList.Add(i); Console.WriteLine(i); }
+                    Hands(CardList, PlayersCardsList, players);
+                    Console.Write("Which player would you want to be: ");
+                    int playing = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 0; i < players; i++)
+                    {
+                        if (i == playing - 1)
+                        {
+                            int index = (playing * 2) - 2;
+                            int index2 = (playing * 2) - 1;
+                            Card p1c1 = PlayersCardsList[index];
+                            Card p1c2 = PlayersCardsList[index2];
+                            PlayersCard(p1c1, p1c2);
+                        }
+                    }
+                    River(RiverList, CardList);
+                    while (true)
+                    {
+                        n++;
+                        Options();
+                        Console.Write("Option Picked: ");
+                        int choice = Convert.ToInt32(Console.ReadLine());
+                        if (n > 6) { break; }
+                        if (choice == 1)
+                        {
+                            Console.WriteLine("The River is ");
+                            Console.WriteLine("--------------");
+                            for (int r = 0; r < n - 1; r++)
+                            {
+                                Console.WriteLine(RiverList[r].CardNumber);
+                            }
+                            Console.WriteLine("hi");
+                        }
+                        else if (choice == 2)
+                        {
+                            Console.Write("How much do you want to raise: ");
+                            int Raiseamt = Convert.ToInt32(Console.ReadLine());
+                            PB.DeductBalance(Raiseamt);
+                            pot += Raiseamt;
+                        }
+                        else if (choice == 3){break;}
+                    }
+                }
+                else if (option == 2)
+                {
+                    Console.Write("How much would you like to buy in for?: ");
+                    double buyin = Convert.ToDouble(Console.ReadLine());
+                    PB.Balance = buyin;
+                }
+                else if (option == 3) { Console.WriteLine(PB.Balance); }
+                else if (option == 4)
+                {
+                    Console.Write("How much would you like to top up?: ");
+                    double topup = Convert.ToDouble(Console.ReadLine());
+                    PB.AddBalance(topup);
+                }
+                else if (option == 5) { break; }
             }
-            else if(choice == 2)
-            {
-
-            }
-            else if(choice == 3)
-            {
-
-            }
+        }
+        static void MainMenu()
+        {
+            Console.WriteLine("Welcome to Poker Night! Please pick an option");
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("[1] Play Poker");
+            Console.WriteLine("[2] Set Balance");
+            Console.WriteLine("[3] Check Balance");
+            Console.WriteLine("[4] Top up balance");
+            Console.WriteLine("[5] Exit");
+            Console.WriteLine("---------------------------------------------");
         }
         static void River(List<Card> River, List<Card> CardList)
         {
