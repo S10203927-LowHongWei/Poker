@@ -52,11 +52,12 @@ namespace Poker
                         {
                             Console.WriteLine("The River is ");
                             Console.WriteLine("--------------");
-                            for (int r = 0; r < n - 1; r++)
+                            for (int r = 0; r < n - 2; r++)
                             {
-                                Console.WriteLine(RiverList[r].CardNumber);
+                                Console.Write("|   {0} of {1}   ", RiverList[r].CardNumber, RiverList[r].CardSuit);
                             }
-                            Console.WriteLine("hi");
+                            Console.WriteLine("|");
+                            Console.WriteLine("");
                         }
                         else if (choice == 2)
                         {
