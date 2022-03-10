@@ -15,4 +15,7 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgVisioForge_DotNet_Core_TRIAL Condition=" '$(PkgVisioForge_DotNet_Core_TRIAL)' == '' ">C:\Users\lowho\.nuget\packages\visioforge.dotnet.core.trial\15.1.12</PkgVisioForge_DotNet_Core_TRIAL>
+  </PropertyGroup>
 </Project>

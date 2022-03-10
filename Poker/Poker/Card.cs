@@ -6,14 +6,17 @@ namespace Poker
 {
     class Card
     {
-        public string CardNumber { get; set; }
         public string CardSuit { get; set; }
+        public string CardNumber { get; set; }
         public Card() { }
-        public Card(string cn, string cs)
+        public Card(string cs, string cn)
         {
-            CardNumber = cn;
             CardSuit = cs;
+            CardNumber = cn;
         }
-
+        public override string ToString()
+        {
+            return "Card Suit: " + CardSuit;
+        }
     }
 }
